@@ -1,6 +1,6 @@
 name: vita-packages
 
-on:
+on: [workflow_dispatch]
   push:
     tags: [ vita-packages ]
 
