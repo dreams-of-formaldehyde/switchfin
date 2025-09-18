@@ -283,7 +283,6 @@ bool AppConfig::init() {
     if (_vshKernelSearchModuleByName("CapUnlocker", search_unk) >= 0) {
         brls::sync([]() { brls::Application::notify("CapUnlocker found"); });
         sceKernelChangeThreadPriority(SCE_KERNEL_THREAD_ID_SELF, 64);
-        sceKernelChangeThreadCpuAffinityMask(SCE_KERNEL_THREAD_ID_SELF, SCE_KERNEL_CPU_MASK_SYSTEM);
     }
 #elif defined(__PS4__)
     if (sceSysmoduleLoadModuleInternal(ORBIS_SYSMODULE_INTERNAL_NET) < 0) brls::Logger::error("cannot load net module");
