@@ -2,7 +2,7 @@ name: vita-packages
 
 on:
   push:
-    tags: [ vita-packages ]
+    tags: [ vita-packages,workflow_dispatch ]
 
 permissions:
   contents: write
